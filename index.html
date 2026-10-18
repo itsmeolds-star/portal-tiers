@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#09090d" />
+  <meta name="description" content="Portal Tiers — Minecraft PvP tier rankings, player profiles and leaderboards." />
+  <title>Portal Tiers — Minecraft PvP Rankings</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <header class="topbar">
+    <a class="brand" href="#home" aria-label="Portal Tiers home">
+      <span class="brand-mark"><span></span><span></span><span></span><span></span></span>
+      <span>PORTAL<span class="brand-accent">TIERS</span></span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    <nav id="navLinks">
+      <a class="nav-link active" href="#home">Home</a>
+      <a class="nav-link" href="#leaderboard">Leaderboard</a>
+      <a class="nav-link" href="#tiers">Tier system</a>
+      <a class="nav-link" href="#about">About</a>
+    </nav>
+    <a class="discord-btn" href="#community">Community <span>↗</span></a>
+  </header>
+
+  <main>
+    <section class="hero section-wrap" id="home">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="live-dot"></span> THE COMPETITIVE EDGE</div>
+        <h1>PROVE YOUR<br><span class="gradient-text">WORTH.</span></h1>
+        <p class="hero-lead">A home for Minecraft PvP. Track the best players, explore tiers, and see who rules the arena.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#leaderboard">Explore rankings <span>↘</span></a>
+          <a class="button button-ghost" href="#tiers">View tier system</a>
+        </div>
+        <div class="hero-stats">
+          <div><strong id="playerCount">128</strong><span>PLAYERS TRACKED</span></div>
+          <div><strong>5</strong><span>COMPETITIVE TIERS</span></div>
+          <div><strong>24/7</strong><span>ARENA ENERGY</span></div>
+        </div>
+      </div>
+      <div class="hero-art" aria-label="Stylized purple portal artwork">
+        <div class="orbit orbit-a"></div><div class="orbit orbit-b"></div>
+        <div class="portal-shadow"></div>
+        <div class="portal-ring"><div class="portal-inner"><div class="portal-core"></div><div class="portal-pixel p1"></div><div class="portal-pixel p2"></div><div class="portal-pixel p3"></div><div class="portal-pixel p4"></div></div></div>
+        <div class="floating-tag tag-top"><span class="tag-icon">✦</span><span><b>RANK UP</b><small>Earn your place</small></span></div>
+        <div class="floating-tag tag-bottom"><span class="mini-crown">♛</span><span><b>TOP TIER</b><small>Only the best</small></span></div>
+        <div class="art-caption">ENTER THE PORTAL <span>◆ ◆ ◆</span></div>
+      </div>
+    </section>
+
+    <section class="section-wrap leaderboard-section" id="leaderboard">
+      <div class="section-heading">
+        <div><div class="eyebrow">THE ARENA NEVER SLEEPS</div><h2>PLAYER <span class="gradient-text">LEADERBOARD</span></h2><p class="muted">A sample leaderboard you can customize with your real players.</p></div>
+        <div class="filter-wrap"><label for="gamemode">GAMEMODE</label><select id="gamemode"><option value="All">All modes</option><option value="Sword">Sword</option><option value="Crystal">Crystal</option><option value="Axe">Axe</option><option value="Pot">Pot</option></select></div>
+      </div>
+      <div class="table-shell">
+        <div class="table-topline"><span><i class="live-dot"></i> RANKINGS OVERVIEW</span><span class="sample-note">DEMO DATA</span></div>
+        <div class="table-scroll">
+          <table>
+            <thead><tr><th>RANK</th><th>PLAYER</th><th>GAMEMODE</th><th>TIER</th><th>POINTS</th></tr></thead>
+            <tbody id="leaderboardRows"></tbody>
+          </table>
+        </div>
+        <div class="table-footer"><span id="resultCount">Showing 8 players</span><span>Updated by Portal Tiers staff <span class="footer-spark">✦</span></span></div>
+      </div>
+    </section>
+
+    <section class="section-wrap tiers-section" id="tiers">
+      <div class="section-heading centered-heading"><div class="eyebrow">CLIMB THE LADDER</div><h2>THE <span class="gradient-text">TIER SYSTEM</span></h2><p class="muted">Every fight is a chance to prove yourself. Start at the bottom. Aim for the top.</p></div>
+      <div class="tier-grid">
+        <article class="tier-card tier-ht1"><div class="tier-symbol">Ⅰ</div><div class="tier-label">HIGHEST TIER</div><h3>HT1</h3><p>The elite. A place reserved for exceptional players.</p><div class="tier-line"></div><span class="tier-foot">TOP 1% • ELITE</span></article>
+        <article class="tier-card tier-ht2"><div class="tier-symbol">Ⅱ</div><div class="tier-label">HIGH TIER</div><h3>HT2</h3><p>Consistent, skilled, and always a threat.</p><div class="tier-line"></div><span class="tier-foot">ADVANCED</span></article>
+        <article class="tier-card tier-lt1"><div class="tier-symbol">Ⅲ</div><div class="tier-label">MID TIER</div><h3>LT1</h3><p>Strong fundamentals with room to dominate.</p><div class="tier-line"></div><span class="tier-foot">COMPETITIVE</span></article>
+        <article class="tier-card tier-lt2"><div class="tier-symbol">Ⅳ</div><div class="tier-label">LOW TIER</div><h3>LT2</h3><p>Building consistency and sharpening skills.</p><div class="tier-line"></div><span class="tier-foot">IMPROVING</span></article>
+        <article class="tier-card tier-lt3"><div class="tier-symbol">Ⅴ</div><div class="tier-label">ENTRY TIER</div><h3>LT3</h3><p>Every top player starts somewhere. Begin here.</p><div class="tier-line"></div><span class="tier-foot">THE START</span></article>
+      </div>
+      <p class="tier-disclaimer">Tier labels and descriptions are illustrative. Replace them with your community's official rules.</p>
+    </section>
+
+    <section class="section-wrap community-section" id="community">
+      <div class="community-panel"><div class="community-glow"></div><div class="community-content"><div class="eyebrow">YOUR NEXT MATCH STARTS HERE</div><h2>READY TO ENTER<br>THE <span class="gradient-text">PORTAL?</span></h2><p>Bring your skill. Build your reputation. Find your place in the rankings.</p><a class="button button-primary" id="discordLink" href="https://discord.com/" target="_blank" rel="noreferrer">Join the community <span>↗</span></a><small>Demo link — change this to your Discord invite.</small></div><div class="community-emblem">P<span>T</span></div></div>
+    </section>
+
+    <section class="section-wrap about-section" id="about"><div class="about-copy"><div class="eyebrow">BUILT FOR THE GRIND</div><h2>SKILL OVER<br><span class="gradient-text">EVERYTHING.</span></h2></div><p>Portal Tiers is a community concept for Minecraft PvP players who want a clear, stylish way to showcase skill and progression. Rankings shown here are sample data, not verified official results.</p></section>
+  </main>
+
+  <footer class="footer"><a class="brand footer-brand" href="#home"><span class="brand-mark"><span></span><span></span><span></span><span></span></span><span>PORTAL<span class="brand-accent">TIERS</span></span></a><span>Made for the Minecraft PvP community.</span><a href="#home">BACK TO TOP ↑</a></footer>
+  <script src="script.js"></script>
+</body>
+</html>
