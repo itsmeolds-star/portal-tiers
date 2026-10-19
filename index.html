@@ -39,8 +39,8 @@
           <a class="button button-ghost" href="#tiers">View tier system</a>
         </div>
         <div class="hero-stats">
-          <div><strong id="playerCount">128</strong><span>PLAYERS TRACKED</span></div>
-          <div><strong>5</strong><span>COMPETITIVE TIERS</span></div>
+          <div><strong id="playerCount">—</strong><span>PLAYER ENTRIES</span></div>
+          <div><strong>10</strong><span>OFFICIAL TIER LEVELS</span></div>
           <div><strong>24/7</strong><span>ARENA ENERGY</span></div>
         </div>
       </div>
@@ -56,38 +56,43 @@
 
     <section class="section-wrap leaderboard-section" id="leaderboard">
       <div class="section-heading">
-        <div><div class="eyebrow">THE ARENA NEVER SLEEPS</div><h2>PLAYER <span class="gradient-text">LEADERBOARD</span></h2><p class="muted">A sample leaderboard you can customize with your real players.</p></div>
+        <div><div class="eyebrow">THE ARENA NEVER SLEEPS</div><h2>PLAYER <span class="gradient-text">LEADERBOARD</span></h2><p class="muted">Live rankings sourced from verified Discord test results.</p></div>
         <div class="filter-wrap"><label for="gamemode">GAMEMODE</label><select id="gamemode"><option value="All">All modes</option><option value="Sword">Sword</option><option value="Crystal">Crystal</option><option value="Axe">Axe</option><option value="Pot">Pot</option></select></div>
       </div>
       <div class="table-shell">
-        <div class="table-topline"><span><i class="live-dot"></i> RANKINGS OVERVIEW</span><span class="sample-note">DEMO DATA</span></div>
+        <div class="table-topline"><span><i class="live-dot"></i> RANKINGS OVERVIEW</span><span class="sample-note" id="syncStatus">CONNECTING…</span></div>
         <div class="table-scroll">
           <table>
             <thead><tr><th>RANK</th><th>PLAYER</th><th>GAMEMODE</th><th>TIER</th><th>POINTS</th></tr></thead>
             <tbody id="leaderboardRows"></tbody>
           </table>
         </div>
-        <div class="table-footer"><span id="resultCount">Showing 8 players</span><span>Updated by Portal Tiers staff <span class="footer-spark">✦</span></span></div>
+        <div class="table-footer"><span id="resultCount">Loading verified results…</span><span id="lastUpdated">Synced from Discord <span class="footer-spark">✦</span></span></div>
       </div>
     </section>
 
     <section class="section-wrap tiers-section" id="tiers">
       <div class="section-heading centered-heading"><div class="eyebrow">CLIMB THE LADDER</div><h2>THE <span class="gradient-text">TIER SYSTEM</span></h2><p class="muted">Every fight is a chance to prove yourself. Start at the bottom. Aim for the top.</p></div>
       <div class="tier-grid">
-        <article class="tier-card tier-ht1"><div class="tier-symbol">Ⅰ</div><div class="tier-label">HIGHEST TIER</div><h3>HT1</h3><p>The elite. A place reserved for exceptional players.</p><div class="tier-line"></div><span class="tier-foot">TOP 1% • ELITE</span></article>
-        <article class="tier-card tier-ht2"><div class="tier-symbol">Ⅱ</div><div class="tier-label">HIGH TIER</div><h3>HT2</h3><p>Consistent, skilled, and always a threat.</p><div class="tier-line"></div><span class="tier-foot">ADVANCED</span></article>
-        <article class="tier-card tier-lt1"><div class="tier-symbol">Ⅲ</div><div class="tier-label">MID TIER</div><h3>LT1</h3><p>Strong fundamentals with room to dominate.</p><div class="tier-line"></div><span class="tier-foot">COMPETITIVE</span></article>
-        <article class="tier-card tier-lt2"><div class="tier-symbol">Ⅳ</div><div class="tier-label">LOW TIER</div><h3>LT2</h3><p>Building consistency and sharpening skills.</p><div class="tier-line"></div><span class="tier-foot">IMPROVING</span></article>
-        <article class="tier-card tier-lt3"><div class="tier-symbol">Ⅴ</div><div class="tier-label">ENTRY TIER</div><h3>LT3</h3><p>Every top player starts somewhere. Begin here.</p><div class="tier-line"></div><span class="tier-foot">THE START</span></article>
+        <article class="tier-card tier-ht1"><div class="tier-symbol">Ⅰ</div><div class="tier-label">HIGH TIER</div><h3>HT1</h3><p>40 points per current tier entry.</p><div class="tier-line"></div><span class="tier-foot">40 POINTS</span></article>
+        <article class="tier-card tier-lt1"><div class="tier-symbol">Ⅱ</div><div class="tier-label">LOW TIER</div><h3>LT1</h3><p>35 points per current tier entry.</p><div class="tier-line"></div><span class="tier-foot">35 POINTS</span></article>
+        <article class="tier-card tier-ht2"><div class="tier-symbol">Ⅲ</div><div class="tier-label">HIGH TIER</div><h3>HT2</h3><p>30 points per current tier entry.</p><div class="tier-line"></div><span class="tier-foot">30 POINTS</span></article>
+        <article class="tier-card tier-lt2"><div class="tier-symbol">Ⅳ</div><div class="tier-label">LOW TIER</div><h3>LT2</h3><p>25 points per current tier entry.</p><div class="tier-line"></div><span class="tier-foot">25 POINTS</span></article>
+        <article class="tier-card tier-ht3"><div class="tier-symbol">Ⅴ</div><div class="tier-label">HIGH TIER</div><h3>HT3</h3><p>20 points per current tier entry.</p><div class="tier-line"></div><span class="tier-foot">20 POINTS</span></article>
+        <article class="tier-card tier-lt3"><div class="tier-symbol">Ⅵ</div><div class="tier-label">LOW TIER</div><h3>LT3</h3><p>15 points per current tier entry.</p><div class="tier-line"></div><span class="tier-foot">15 POINTS</span></article>
+        <article class="tier-card tier-ht4"><div class="tier-symbol">Ⅶ</div><div class="tier-label">HIGH TIER</div><h3>HT4</h3><p>10 points per current tier entry.</p><div class="tier-line"></div><span class="tier-foot">10 POINTS</span></article>
+        <article class="tier-card tier-lt4"><div class="tier-symbol">Ⅷ</div><div class="tier-label">LOW TIER</div><h3>LT4</h3><p>5 points per current tier entry.</p><div class="tier-line"></div><span class="tier-foot">5 POINTS</span></article>
+        <article class="tier-card tier-ht5"><div class="tier-symbol">Ⅸ</div><div class="tier-label">HIGH TIER</div><h3>HT5</h3><p>3 points per current tier entry.</p><div class="tier-line"></div><span class="tier-foot">3 POINTS</span></article>
+        <article class="tier-card tier-lt5"><div class="tier-symbol">Ⅹ</div><div class="tier-label">LOW TIER</div><h3>LT5</h3><p>2 points per current tier entry.</p><div class="tier-line"></div><span class="tier-foot">2 POINTS</span></article>
       </div>
-      <p class="tier-disclaimer">Tier labels and descriptions are illustrative. Replace them with your community's official rules.</p>
+      <p class="tier-disclaimer">Points are calculated automatically from the latest verified Discord tier for each player and gamemode.</p>
     </section>
 
     <section class="section-wrap community-section" id="community">
-      <div class="community-panel"><div class="community-glow"></div><div class="community-content"><div class="eyebrow">YOUR NEXT MATCH STARTS HERE</div><h2>READY TO ENTER<br>THE <span class="gradient-text">PORTAL?</span></h2><p>Bring your skill. Build your reputation. Find your place in the rankings.</p><a class="button button-primary" id="discordLink" href="https://discord.com/" target="_blank" rel="noreferrer">Join the community <span>↗</span></a><small>Demo link — change this to your Discord invite.</small></div><div class="community-emblem">P<span>T</span></div></div>
+      <div class="community-panel"><div class="community-glow"></div><div class="community-content"><div class="eyebrow">YOUR NEXT MATCH STARTS HERE</div><h2>READY TO ENTER<br>THE <span class="gradient-text">PORTAL?</span></h2><p>Bring your skill. Build your reputation. Find your place in the rankings.</p><a class="button button-primary" id="discordLink" href="https://discord.com/" target="_blank" rel="noreferrer">Join the community <span>↗</span></a><small>Join the community and get tested by the Portal Tiers team.</small></div><div class="community-emblem">P<span>T</span></div></div>
     </section>
 
-    <section class="section-wrap about-section" id="about"><div class="about-copy"><div class="eyebrow">BUILT FOR THE GRIND</div><h2>SKILL OVER<br><span class="gradient-text">EVERYTHING.</span></h2></div><p>Portal Tiers is a community concept for Minecraft PvP players who want a clear, stylish way to showcase skill and progression. Rankings shown here are sample data, not verified official results.</p></section>
+    <section class="section-wrap about-section" id="about"><div class="about-copy"><div class="eyebrow">BUILT FOR THE GRIND</div><h2>SKILL OVER<br><span class="gradient-text">EVERYTHING.</span></h2></div><p>Portal Tiers ranks Minecraft PvP players using the latest structured test results recorded in the configured Discord results channel. Rankings are calculated from the current tier for each gamemode.</p></section>
   </main>
 
   <footer class="footer"><a class="brand footer-brand" href="#home"><span class="brand-mark"><span></span><span></span><span></span><span></span></span><span>PORTAL<span class="brand-accent">TIERS</span></span></a><span>Made for the Minecraft PvP community.</span><a href="#home">BACK TO TOP ↑</a></footer>
