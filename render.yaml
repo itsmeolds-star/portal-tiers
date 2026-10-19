@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: portal-tiers-live
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_VERSION
+        value: 20
+      - key: SYNC_HISTORY_LIMIT
+        value: 500
