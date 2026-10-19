@@ -27,7 +27,7 @@ function renderPlayers() {
 }
 async function loadPlayers() {
   try {
-    const response = await fetch('/api/players', { cache: 'no-store' });
+    const response = await fetch('https://portal-tiers-backen.onrender.com', { cache: 'no-store' });
     if (!response.ok) throw new Error(`API returned ${response.status}`);
     const data = await response.json();
     players = Array.isArray(data.players) ? data.players : [];
